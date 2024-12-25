@@ -21,3 +21,19 @@ function getComputerChoice(){
 }
 
 getComputerChoice()
+
+
+
+// Write the logic to get the human choice
+
+function getHumanChoice(){
+    let userInput = prompt('');
+    console.log(userInput)
+}
+
+getHumanChoice()
+
+
+//Declare the players score variables
+let humanScore = 0;
+let computerScore = 0;
