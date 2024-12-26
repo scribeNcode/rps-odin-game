@@ -8,19 +8,22 @@ function getComputerChoice(){
     // Randomly return this : “rock”, “paper” or “scissors”
     switch (randomNum) {
         case 0 :
+            return "rock"
             console.log("rock")
             break;
 
         case 1 :
+            return "paper"
             console.log("paper")
             break;
         default:
+            return "scissors"
             console.log("Scissors")
             break;
     }
 }
 
-getComputerChoice()
+// getComputerChoice()
 
 
 
@@ -28,12 +31,18 @@ getComputerChoice()
 
 function getHumanChoice(){
     let userInput = prompt('');
+    return userInput
     console.log(userInput)
 }
 
-getHumanChoice()
+// getHumanChoice()
+
 
 
 //Declare the players score variables
 let humanScore = 0;
 let computerScore = 0;
+
+
+
+
