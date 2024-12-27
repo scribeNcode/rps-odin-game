@@ -35,15 +35,15 @@ function getHumanChoice(){
 }
 
 
-
+    //Declare the players score variables
+    let humanScore = 0;
+    let computerScore = 0;
 
 // ------ A logic to play the entire game -----------------------
 
 function playGame(){
 
-    //Declare the players score variables
-let humanScore = 0;
-let computerScore = 0;
+
 
 
 // A function to console log the result of  round
@@ -91,9 +91,15 @@ function playRound( computerChoice , humanChoice){
     }
 }
 
-playRound(computer, human);
+playRound(computer, human)
+
 
 }
 
 playGame()
+playGame()
+playGame()
+playGame()
+playGame()
+
 
