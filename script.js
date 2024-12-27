@@ -58,29 +58,39 @@ let computer = getComputerChoice()
 
 
 
-function playRound( computerChoice , humanChoice,){
+function playRound( computerChoice , humanChoice){
+
     if(computerChoice === "rock" && humanChoice === "scissors"){
         result = `You lose! ${computerChoice} beats ${humanChoice}.`
+        computerScore += 1
         console.log(result)
+        console.log(`Computer : ${computerScore} , human ${humanScore}`)
+
         return result
     }else if(computerChoice === "scissors" && humanChoice === "paper"){
         result = `You lose! ${computerChoice} beats ${humanChoice}.`
+        computerScore += 1
         console.log(result)
+        console.log(`Computer : ${computerScore} , human ${humanScore}`)
         return result 
     }else if(computerChoice === "paper" && humanChoice === "rock"){
         result = `You lose! ${computerChoice} beats ${humanChoice}.`
+        computerScore += 1
         console.log(result)
+        console.log(`Computer : ${computerScore} , human ${humanScore}`)
         return result 
     }else if(computerChoice === humanChoice){
         result = `It's a tie`
         console.log(result)
+        console.log(`Computer : ${computerScore} , human ${humanScore}`)
         return result
     }else{
         result = `You won ! ${humanChoice} beats ${computerChoice}`
+        humanScore += 1
         console.log(result)
+        console.log(`Computer : ${computerScore} , human ${humanScore}`)
         return result
     }
-
 }
 
 playRound(computer, human);
