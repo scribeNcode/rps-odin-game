@@ -22,7 +22,7 @@ function getComputerChoice(){
     }
 }
 
-// getComputerChoice()
+
 
 
 
@@ -31,21 +31,19 @@ function getComputerChoice(){
 function getHumanChoice(){
     let userInput = prompt('').toLowerCase();
     return userInput
-    
-    
-    
+       
 }
 
-// getHumanChoice()
 
 
 
-//Declare the players score variables
+// ------ A logic to play the entire game -----------------------
+
+function playGame(){
+
+    //Declare the players score variables
 let humanScore = 0;
 let computerScore = 0;
-
-
-
 
 
 // A function to console log the result of  round
@@ -94,3 +92,8 @@ function playRound( computerChoice , humanChoice){
 }
 
 playRound(computer, human);
+
+}
+
+playGame()
+
