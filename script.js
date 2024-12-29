@@ -3,6 +3,10 @@ let rockButton = document.querySelector("#rock");
 let paperButton = document.querySelector("#paper");
 let scissorsButton = document.querySelector("#scissors");
 
+// get user and human choice container 
+let userChoiceWrapper = document.querySelector('#humanChoiceDisplay');
+let computerChoiceWrapper = document.querySelector('#computerChoiceDisplay');
+
 
 // ------------------------ computer choice ----------------------------------------
 function getComputerChoice() {
@@ -12,14 +16,17 @@ function getComputerChoice() {
   switch (randomNum) {
     case 0:
       console.log("rock");
+      computerChoiceWrapper.textContent = "rock"
       return "rock";
       break;
 
     case 1:
       console.log("paper");
+      computerChoiceWrapper.textContent = "paper"
       return "paper";
       break;
     default:
+        computerChoiceWrapper.textContent = "scissors"
       return "scissors";
       break;
   }
@@ -32,6 +39,7 @@ let userInput = "";
 rockButton.addEventListener("click", (e) => {
   e.preventDefault();
   userInput = "rock";
+  userChoiceWrapper.textContent = "rock"
   console.log(userInput);
   playGame();
 });
@@ -39,6 +47,7 @@ rockButton.addEventListener("click", (e) => {
 paperButton.addEventListener("click", (e) => {
   e.preventDefault();
   userInput = "paper";
+  userChoiceWrapper.textContent = "paper"
   console.log(userInput);
   playGame();
 });
@@ -46,6 +55,7 @@ paperButton.addEventListener("click", (e) => {
 scissorsButton.addEventListener("click", (e) => {
   e.preventDefault();
   userInput = "scissors";
+  userChoiceWrapper.textContent = "scissors"
   console.log(userInput);
   playGame();
 });
