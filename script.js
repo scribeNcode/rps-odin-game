@@ -5,7 +5,12 @@ let scissorsButton = document.querySelector("#scissors");
 
 // get user and human choice container 
 let userChoiceWrapper = document.querySelector('#humanChoiceDisplay');
-let computerChoiceWrapper = document.querySelector('#computerChoiceDisplay');
+let computerChoiceWrapper = document.querySelector('#computerChoiceDisplay'); 
+
+
+// Get result container
+let resultWrapper = document.querySelector('#roundResult');
+
 
 
 // ------------------------ computer choice ----------------------------------------
@@ -81,33 +86,48 @@ function playGame() {
 
   function playRound(computerChoice, humanChoice) {
     if (computerChoice === "rock" && humanChoice === "scissors") {
-      result = `You lose! ${computerChoice} beats ${humanChoice}.`;
+      result = `You lost this round! ${computerChoice} beats ${humanChoice}.`;
       computerScore += 1;
       console.log(result);
+      resultWrapper.textContent = result
+      document.querySelector('#userCurrentScore').textContent = humanScore
+      document.querySelector('#computerCurrentScore').textContent = computerScore
       console.log(`Computer : ${computerScore} , human ${humanScore}`);
 
       return result;
     } else if (computerChoice === "scissors" && humanChoice === "paper") {
-      result = `You lose! ${computerChoice} beats ${humanChoice}.`;
+      result = `You lost this round! ${computerChoice} beats ${humanChoice}.`;
       computerScore += 1;
       console.log(result);
+      resultWrapper.textContent = result
+      document.querySelector('#userCurrentScore').textContent = humanScore
+      document.querySelector('#computerCurrentScore').textContent = computerScore
       console.log(`Computer : ${computerScore} , human ${humanScore}`);
       return result;
     } else if (computerChoice === "paper" && humanChoice === "rock") {
-      result = `You lose! ${computerChoice} beats ${humanChoice}.`;
+      result = `You lost this round! ${computerChoice} beats ${humanChoice}.`;
       computerScore += 1;
       console.log(result);
+      resultWrapper.textContent = result
+      document.querySelector('#userCurrentScore').textContent = humanScore
+      document.querySelector('#computerCurrentScore').textContent = computerScore
       console.log(`Computer : ${computerScore} , human ${humanScore}`);
       return result;
     } else if (computerChoice === humanChoice) {
       result = `It's a tie`;
       console.log(result);
+      resultWrapper.textContent = result
+      document.querySelector('#userCurrentScore').textContent = humanScore
+      document.querySelector('#computerCurrentScore').textContent = computerScore
       console.log(`Computer : ${computerScore} , human ${humanScore}`);
       return result;
     } else {
-      result = `You won ! ${humanChoice} beats ${computerChoice}`;
+      result = `You won this round ! ${humanChoice} beats ${computerChoice}`;
       humanScore += 1;
       console.log(result);
+      resultWrapper.textContent = result
+      document.querySelector('#userCurrentScore').textContent = humanScore
+      document.querySelector('#computerCurrentScore').textContent = computerScore
       console.log(`Computer : ${computerScore} , human ${humanScore}`);
       return result;
     }
