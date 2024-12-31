@@ -142,6 +142,13 @@ function playGame() {
     rockButton.style.display = "none";
     paperButton.style.display = "none";
     scissorsButton.style.display = "none";
+    resultWrapper.style.display = "none" ;  
+  }
+
+  if(humanScore === 5 || computerScore === 5 && humanScore > computerScore){
+    document.querySelector('#finalResult').textContent = "HUMAN WINS" 
+  }else if(humanScore === 5 || computerScore === 5 && humanScore < computerScore){
+    document.querySelector('#finalResult').textContent = "COMPUTER WINS"
   }
 }
 
